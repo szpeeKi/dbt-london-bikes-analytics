@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: stg_alugueis
+    columns:
+      
+      # Testando a primeira coluna (precisa ser unica e não nula)
+      - name: id_aluguel
+        tests:
+          - not_null
+          - unique
+
+      # Testando a segunda coluna (precisa ser não nula)
+      - name: estacao_origem
+        tests:
+          - not_null
